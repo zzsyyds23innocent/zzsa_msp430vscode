@@ -75,6 +75,7 @@ unsigned int DS18B20_Conert(void);                    //转换温度
 
 int main(void) {
     WDTCTL = WDTPW + WDTHOLD;
+    //下面是spwm生成
 //     BCSCTL1 = CALBC1_12MHZ;//设置定时器时钟为 12MHz
 //     DCOCTL = CALDCO_12MHZ;
 //     void Timer0_A_Init();
