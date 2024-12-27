@@ -105,19 +105,19 @@ int main(void) {
 
     }
 
-    while(1) {
-        cel = DS18B20_Conert() * 0.625;   //温度数值 0.0625=xx, 0.625=xx.x, 6.25=xx.xx
-        key_detect();                     //按键功能
+    // while(1) {
+    //     cel = DS18B20_Conert() * 0.625;   //温度数值 0.0625=xx, 0.625=xx.x, 6.25=xx.xx
+    //     key_detect();                     //按键功能
 
-        display_seg();                    //界面显示
+    //     display_seg();                    //界面显示
 
-        ADC10_WaveSample();               //AD采样电压
+    //     ADC10_WaveSample();               //AD采样电压
 
-        vol = (max)*100/266;       //电压有效值
+    //     vol = (max)*100/266;       //电压有效值
 
-        alarm();                          //报警
-        TA1CCR1 = TA1CCR0*(dc_one + 0.1 *dc_dig )/3.5;//pwm占空比
-    }
+    //     alarm();                          //报警
+    //     TA1CCR1 = TA1CCR0*(dc_one + 0.1 *dc_dig )/3.5;//pwm占空比
+    // }
 }
 //void Timer0_A_Init()
 //{
